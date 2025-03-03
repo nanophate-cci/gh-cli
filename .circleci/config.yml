@@ -11,13 +11,13 @@ jobs:
       GITHUB_USER: nanophate
     steps:
       - gh/setup
-      #- run:
-      #    name: setup git+https
-      #    command: |
-      #      git config --global user.email "dummy@local"
-      #      git config --global user.name "${GITHUB_USER}"
+      - run:
+          name: setup git+https
+          command: |
+            git config --global user.email "dummy@local"
+            git config --global user.name "${GITHUB_USER}"
 
             # switch to git+https, not git+ssh
-      #      git config --global url."https://github.com/".insteadOf git@github.com:
-      #      git config --global url."https://".insteadOf git://
+            git config --global url."https://github.com/".insteadOf git@github.com:
+            git config --global url."https://".insteadOf git://
       - checkout
